@@ -1,0 +1,527 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1084F6CB-7B50-42E8-AB44-3F623A3A196C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SistemaMAPAN</RootNamespace>
+    <AssemblyName>SistemaMAPAN</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="clsCEP">
+      <HintPath>..\..\..\2.Classes\2. CEP\clsCEP\bin\Debug\clsCEP.dll</HintPath>
+    </Reference>
+    <Reference Include="clsConexao">
+      <HintPath>..\..\..\2.Classes\1.Classe de Conexão\clsConexao\clsConexao\bin\Debug\clsConexao.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>F:\ETEC\TCC\prjEstatAdocao ADOCOES-OBITOS\prjEstatistica\bin\Debug\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Office, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clsEventosProx.cs" />
+    <Compile Include="Formularios\Agenda\clsAgenda.cs" />
+    <Compile Include="Formularios\Agenda\clsWord.cs" />
+    <Compile Include="Formularios\Agenda\frmAgenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Agenda\frmAgenda.designer.cs">
+      <DependentUpon>frmAgenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Agenda\frmHistorico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Agenda\frmHistorico.designer.cs">
+      <DependentUpon>frmHistorico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Agenda\frmNovoEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Agenda\frmNovoEvento.designer.cs">
+      <DependentUpon>frmNovoEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Agenda\frmRelacaoAnimalEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Agenda\frmRelacaoAnimalEvento.designer.cs">
+      <DependentUpon>frmRelacaoAnimalEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Agenda\frmVistoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Agenda\frmVistoria.designer.cs">
+      <DependentUpon>frmVistoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Animal\clsEditarAnimal.cs" />
+    <Compile Include="Formularios\Animal\frmCadAnimal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Animal\frmCadAnimal.designer.cs">
+      <DependentUpon>frmCadAnimal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Animal\FrmEditarAnimal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Animal\FrmEditarAnimal.designer.cs">
+      <DependentUpon>FrmEditarAnimal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Animal\frmInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Animal\frmInfo.designer.cs">
+      <DependentUpon>frmInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Animal\frmNovaVacina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Animal\frmNovaVacina.designer.cs">
+      <DependentUpon>frmNovaVacina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Animal\frmObito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Animal\frmObito.designer.cs">
+      <DependentUpon>frmObito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Animal\frmVacinas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Animal\frmVacinas.designer.cs">
+      <DependentUpon>frmVacinas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Animal\Frm_consulta_animal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Animal\Frm_consulta_animal.designer.cs">
+      <DependentUpon>Frm_consulta_animal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Animal\Frm_transferir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Animal\Frm_transferir.designer.cs">
+      <DependentUpon>Frm_transferir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Contrato-Adoção\clsWord.cs" />
+    <Compile Include="Formularios\Contrato-Adoção\Frm_config.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Contrato-Adoção\Frm_config.designer.cs">
+      <DependentUpon>Frm_config.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Contrato-Adoção\Frm_contrato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Contrato-Adoção\Frm_contrato.designer.cs">
+      <DependentUpon>Frm_contrato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Contrato-Adoção\Frm_pesquisa_contrato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Contrato-Adoção\Frm_pesquisa_contrato.designer.cs">
+      <DependentUpon>Frm_pesquisa_contrato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Denúncias\FrmAdicionarDenuncia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Denúncias\FrmAdicionarDenuncia.designer.cs">
+      <DependentUpon>FrmAdicionarDenuncia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Denúncias\FrmBuscarDenuncia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Denúncias\FrmBuscarDenuncia.designer.cs">
+      <DependentUpon>FrmBuscarDenuncia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Denúncias\FrmEditarDenuncia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Denúncias\FrmEditarDenuncia.designer.cs">
+      <DependentUpon>FrmEditarDenuncia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Denúncias\FrmExcluirDenuncia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Denúncias\FrmExcluirDenuncia.designer.cs">
+      <DependentUpon>FrmExcluirDenuncia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Doações\frmCadastroDoador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Doações\frmCadastroDoador.designer.cs">
+      <DependentUpon>frmCadastroDoador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Doações\frmDoacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Doações\frmDoacao.designer.cs">
+      <DependentUpon>frmDoacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Doações\frmNovo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Doações\frmNovo.designer.cs">
+      <DependentUpon>frmNovo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Doações\frmNovoTipoDoacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Doações\frmNovoTipoDoacao.designer.cs">
+      <DependentUpon>frmNovoTipoDoacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Doações\frmPesquisaDoador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Doações\frmPesquisaDoador.designer.cs">
+      <DependentUpon>frmPesquisaDoador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Estatistica\frmEstatistica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Estatistica\frmEstatistica.designer.cs">
+      <DependentUpon>frmEstatistica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Login\Frm_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Login\Frm_login.designer.cs">
+      <DependentUpon>Frm_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Login\Frm_usuario_novo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Login\Frm_usuario_novo.designer.cs">
+      <DependentUpon>Frm_usuario_novo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Protetor\frmAdicionaProtetor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Protetor\frmAdicionaProtetor.designer.cs">
+      <DependentUpon>frmAdicionaProtetor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Protetor\frmPesquisaProtetor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Protetor\frmPesquisaProtetor.designer.cs">
+      <DependentUpon>frmPesquisaProtetor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEstatisticaAdocao.cs" />
+    <Compile Include="frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\Agenda\frmAgenda.resx">
+      <DependentUpon>frmAgenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Agenda\frmHistorico.resx">
+      <DependentUpon>frmHistorico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Agenda\frmNovoEvento.resx">
+      <DependentUpon>frmNovoEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Agenda\frmRelacaoAnimalEvento.resx">
+      <DependentUpon>frmRelacaoAnimalEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Agenda\frmVistoria.resx">
+      <DependentUpon>frmVistoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Animal\frmCadAnimal.resx">
+      <DependentUpon>frmCadAnimal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Animal\FrmEditarAnimal.resx">
+      <DependentUpon>FrmEditarAnimal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Animal\frmInfo.resx">
+      <DependentUpon>frmInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Animal\frmNovaVacina.resx">
+      <DependentUpon>frmNovaVacina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Animal\frmObito.resx">
+      <DependentUpon>frmObito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Animal\frmVacinas.resx">
+      <DependentUpon>frmVacinas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Animal\Frm_consulta_animal.resx">
+      <DependentUpon>Frm_consulta_animal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Animal\Frm_transferir.resx">
+      <DependentUpon>Frm_transferir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Contrato-Adoção\Frm_config.resx">
+      <DependentUpon>Frm_config.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Contrato-Adoção\Frm_contrato.resx">
+      <DependentUpon>Frm_contrato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Contrato-Adoção\Frm_pesquisa_contrato.resx">
+      <DependentUpon>Frm_pesquisa_contrato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Denúncias\FrmAdicionarDenuncia.resx">
+      <DependentUpon>FrmAdicionarDenuncia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Denúncias\FrmBuscarDenuncia.resx">
+      <DependentUpon>FrmBuscarDenuncia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Denúncias\FrmEditarDenuncia.resx">
+      <DependentUpon>FrmEditarDenuncia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Denúncias\FrmExcluirDenuncia.resx">
+      <DependentUpon>FrmExcluirDenuncia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Doações\frmCadastroDoador.resx">
+      <DependentUpon>frmCadastroDoador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Doações\frmDoacao.resx">
+      <DependentUpon>frmDoacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Doações\frmNovo.resx">
+      <DependentUpon>frmNovo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Doações\frmNovoTipoDoacao.resx">
+      <DependentUpon>frmNovoTipoDoacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Doações\frmPesquisaDoador.resx">
+      <DependentUpon>frmPesquisaDoador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Estatistica\frmEstatistica.resx">
+      <DependentUpon>frmEstatistica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Login\Frm_login.resx">
+      <DependentUpon>Frm_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Login\Frm_usuario_novo.resx">
+      <DependentUpon>Frm_usuario_novo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Protetor\frmAdicionaProtetor.resx">
+      <DependentUpon>frmAdicionaProtetor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Protetor\frmPesquisaProtetor.resx">
+      <DependentUpon>frmPesquisaProtetor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Formularios\Estoque\Est\" />
+    <Folder Include="Padrao\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user--plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\system-log-out_003.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box-medium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box--plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wooden-box--minus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wooden-box--plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar--plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mypc_search_16.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar-medium.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-thief.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cargo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\configuration.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\config_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email_48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-silhouette.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zone_money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar-select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-female.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cao2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\t9dog2_trans.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2006_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money-coin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reports_98403.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuartoLogo_MAPAN%28128x102%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PrimeiroTopo_SAM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fundoTopo_SAM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FundoPainelPrincipalSAM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoMAPAN---200x100-25-11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LogoMAPAN---200x100-25-111.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
